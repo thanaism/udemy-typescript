@@ -8,10 +8,10 @@ Google で`typescript playground`と検索すると開発元である Microsoft 
 
 ```ts
 // TypeScript
-const message: string = "hello world";
+const message: string = 'hello world';
 
 // transpiled to JavaScript
-const message = "hello world";
+const message = 'hello world';
 ```
 
 型宣言と違反時のエラーが TypeScript のもたらす恩恵
@@ -86,3 +86,13 @@ $ npm install --save-dev ts-node-dev
 `package.json`の`scripts`に書きを追記。  
 `"dev": "ts-node-dev --respawn",`  
 以降は`$ npm run dev *.ts`で実行できる。
+
+## vscode の設定
+
+`code`にパスを通す：コマンドパレットから。  
+`prettier`拡張機能のインストール。  
+文末セミコロン、保存時の自動整形、JSX 中のシングルクオート。
+
+## tsconfig.json
+
+`$ npx tsc --init`
