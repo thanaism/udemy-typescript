@@ -96,3 +96,40 @@ $ npm install --save-dev ts-node-dev
 ## tsconfig.json
 
 `$ npx tsc --init`
+vscode の右下の TypeScript のバージョンをクリックして、プロジェクトの TypeScript バージョンに準拠させる。
+
+## プリミティブ型
+
+これ以上、分解できないような型の基本単位
+`$ eho 'export {};' > src/boolean.ts`
+`export {};`しておくとモジュール化されてグローバル空間の名前汚染がなくなる。
+
+## ジェネリクス
+
+`ata <T>`
+
+## 配列の型宣言
+
+```ts
+let numbers: number[] = [1, 2, 3];
+let numbers2: Array<number> = [1, 2, 3];
+
+let strings: Array<string> = ['Tokyo', 'Osaka', 'Kyoto'];
+
+let nijigenArray: Array<Array<number>> = [
+  [1, 2, 3],
+  [1, 2, 3],
+];
+let nijigenArray2: number[][] = [
+  [1, 2, 3],
+  [1, 2, 3],
+];
+
+let mixArray: (string | number | boolean)[] = [1, false, 'hoge'];
+```
+
+### never 型
+
+呼び出し元に戻らない関数  
+`void`と`never`をちゃんと峻別すること  
+`error`は唯一`never`型を返す
